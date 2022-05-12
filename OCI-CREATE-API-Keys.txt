@@ -2,15 +2,15 @@
 OCI API Signing Key (. PEM format):
 ================================
 
-To generate the key with no passphrase:
+# To generate the key with no passphrase:
+
 mkdir $HOME/.oci
 cd $HOME/.oci
-
 openssl genrsa -out ~/.oci/iot_oci_api_key.pem 2048                       
 chmod go-rwx ~/.oci/iot_oci_api_key.pem              
  
-Generate the public key from your new private key:
+# Generate the public key from your new private key:
 openssl rsa -pubout -in ~/.oci/iot_oci_api_key.pem -out ~/.oci/iot_oci_api_key_public.pem            
- 
-Copy the contents of the public key to Tenancy to setup API connectivity
+
+# Copy the contents of the public key to Tenancy to setup API connectivity
 cat ~/.oci/iot_oci_api_key_public.pem 
