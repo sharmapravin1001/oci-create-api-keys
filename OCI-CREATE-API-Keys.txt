@@ -1,6 +1,6 @@
-============================
-OCI API Signing Key (. PEM format):
-================================
+================================================================
+OCI API Signing Key (. PEM format) [Oracle Cloud Infrastructure] :
+================================================================
 
 # To generate the key with no passphrase:
 
@@ -12,5 +12,5 @@ chmod go-rwx ~/.oci/iot_oci_api_key.pem
 # Generate the public key from your new private key:
 openssl rsa -pubout -in ~/.oci/iot_oci_api_key.pem -out ~/.oci/iot_oci_api_key_public.pem            
 
-# Copy the contents of the public key to Tenancy to setup API connectivity
+# Copy the contents of the public key to Tenancy to setup API connectivity on Oracle Cloud Infrastructure
 cat ~/.oci/iot_oci_api_key_public.pem 
